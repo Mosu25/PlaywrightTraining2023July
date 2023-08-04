@@ -12,16 +12,18 @@ public class LaunchBrowser {
         Playwright playwright = Playwright.create();
 
         //Playwright default run on headless mode
+        //Default browser launch in playwright browser engine
+
         Browser browser = playwright.chromium().launch(
                 new BrowserType
                         .LaunchOptions()
                         .setHeadless(false)
-                        .setChannel("chrome")
+                        .setChannel("chrome") //  Our system browser launch "Chrome or edge"
         );
+
 //        Browser browser = playwright.firefox().launch(
 //                new BrowserType.LaunchOptions().setHeadless(false)
 //        );
-//
 //        Browser browser = playwright.webkit().launch(
 //                new BrowserType.LaunchOptions().setHeadless(false)
 //        );
